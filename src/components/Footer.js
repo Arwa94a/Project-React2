@@ -2,6 +2,8 @@ import { Container } from "react-bootstrap";
 
 function Footer() {
     return ( <>
+    
+ 
     <Container class="footer">
       <div class="wrapper">
          

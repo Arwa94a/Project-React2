@@ -30,6 +30,9 @@
      z-index: 3;
 
     }
+    div.navbar-2{
+      height: 70px;
+    }
     .navbar-2 img{
         display: flex;
         align-items: center;

@@ -19,10 +19,7 @@ function CardInformation(props) {
     </Card.Body>
   </Card>
 </Col>
-      ))
- 
-  
-  )
+   
 
     </> );
 }

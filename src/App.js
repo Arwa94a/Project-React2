@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router"
+import { Route, Routes, useNavigate } from "react-router-dom"
 import Footer from "./components/Footer"
 import ProgrammingNav from "./components/ProgrammingNav"
 import CodeJs from "./Pages/CodeJs"
@@ -11,24 +11,23 @@ import Home from "./Pages/Home"
 import Learn from "./Pages/Learn"
 import PlatForm from "./Pages/PlatForms"
 import SignUp from "./Pages/SignUp"
-
 import Vision from "./Pages/Vision"
 import CodeHtml from "./Pages/CodeHtml"
 import { useEffect, useState } from "react"
 import axios from "axios"
-
-
 import Information from "./Pages/Information"
 import Login from "./Pages/Login"
-
-
-
 import Css from "./Pages/Css"
 import CodeCss from "./Pages/CodeCss"
  import VidCss from "./Pages/VidCss"
+import AddInformation from "./Pages/AddInformation"
+import Profile from "./Pages/Profile"
+import Public from "./Pages/Public"
 
 function App() {
   const [informations,setInformations]=useState([])
+  const [profile,setProfile]=useState(null)
+  const navigate=useNavigate()
   const getInformations=async() =>{
     try{ 
       
@@ -38,23 +37,136 @@ function App() {
     }catch(error){
       console.log(error.response.data)
 
-    }
-        
-        
+    }    
   }
+  const addInformation=async e=>{
+    e.preventDefault()
+    const form=e.target
+    try{
+    const addBody={
+      title:form.elements.title.value,
+      image:form.elements.image.value,
+      description:form.elements.description.value,
+
+    }
+    await axios.post("https://vast-chamber-06347.herokuapp.com/api/v2/programming-440/items",addBody,{
+      headers:{
+        Authorization:localStorage.tokenJs,
+
+
+      },
+      
+    })
+    getInformations()
+    navigate("/information")
+  }catch(error){
+console.log(error.response.data)
+  }
+  }
+  const deletInformation=async e=>{
+const informationId=e.target.id
+e.preventDefault()
+try{
+  await axios.delete(`https://vast-chamber-06347.herokuapp.com/api/v2/testProject/items/${informationId}`,{
+    headers:{
+      Authorization:localStorage.tokenJs,
+
+    },
+  })
+  getInformations()
+  
+}catch(error){
+  console.log(error.response.data)
+}
+}
+
   useEffect(()=>{
     console.log("useEffect",useEffect)
     getInformations()
+    if (localStorage.tokenJs){
+      getProfile()
+    }
+   
   },[])
+  /********************************profle************************* */
+  const getProfile =async ()=>{
+    
+try{
+  const response= await axios.get("https://vast-chamber-06347.herokuapp.com/api/user/me",{
+    headers:{
+      Authorization:localStorage.tokenjs,
+
+    },
+  })
+  setProfile(response.data)
+  console.log(response.data)
+}catch(error){
+  console.log(error.response.data)
+}
+  }
+  /********************************signup**************************************** */
+  const signUp=async e=>{
+    e.preventDefault()
+   
+    try{
+      const form=e.target
+      const informationBody={
+        firstName:form.elements.firstName.value,
+        lastName:form.elements.lastName.value,
+        password:form.elements.password.value,
+        email:form.elements.email.value,
+        photo:form.elements.photo.value
+
+
+      }
+    await axios.post("https://vast-chamber-06347.herokuapp.com/api/user",informationBody)
+navigate("/login")
+    }catch(error){
+      console.log(error.response.data)
+    }
+  }
+
+
+  /****************************login*************************** */
+  const login =async e=>{
+    e.preventDefault()
+   
+    try{
+      const form=e.target
+      const informationBody={
+       
+        password:form.elements.password.value,
+        email:form.elements.email.value
+
+      }
+   const response= await axios.post("https://vast-chamber-06347.herokuapp.com/api/user/auth",informationBody)
+    const tokenJs=response.data
+    localStorage.tokenJs=tokenJs
+navigate("/")
+    }catch(error){
+      console.log(error.response.data)
+    }
+  }
+  /*****************************logout*************************************** */
+  const logout=()=>{
+    localStorage.removeItem("tokenJs")
+   
+  }
+
 const store={
   informations:informations,
-
-}
+  signUp:signUp,
+   login:login, 
+   logout:logout,
+   addInformation:addInformation,
+   deletInformation:deletInformation,
+   profile:profile,
+}  
   return (
     <>
      <DevelotContext.Provider value={store}>
+  <ProgrammingNav/>
   
-    <ProgrammingNav />
     <Routes>
 <Route path="/" element={<Home />}/>
 <Route path="vision" element={<Vision />}/>
@@ -75,6 +187,9 @@ const store={
 <Route path="/signup" element={<SignUp />}/>
 <Route path="/login" element={<Login />}/>
 <Route path="/information" element={<Information />}/>
+<Route path="/add-information" element={< AddInformation/>}/>
+<Route path="/profile" element={< Profile/>}/>
+<Route path="/public-information" element={<Public/>}/>
 
 
   

@@ -26,6 +26,11 @@ function SignUp() {
           </div>
 
           <div className="input-div">
+            <h5>Photo:</h5>
+            <input type="url" name="photo" class="input" required/>
+          </div>
+
+          <div className="input-div">
             <h5>Email</h5>
             <input type="email" name="email" class="input" required/>
           </div>

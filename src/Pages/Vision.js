@@ -2,6 +2,7 @@ import backvision from "../Images/backvision.jpg"
 import tuwaiq from "../Images/tuwaiq.png"
 function Vision() {
     return ( <>
+    <div className="vision-2">
     
     <img src={backvision} />
     
@@ -18,7 +19,7 @@ The Kingdom, which ranked first in the world in terms of the number of events he
       Tuwaiq Academy offers a number of programming bootcamps, intensive and short courses,
        in addition to launching Satr Learning platform to be the first
         Arabian platform specialized in the fields of modern technology in Arabic language.</h3>
-        </> );
+        </div> </> );
 }
 
 export default Vision;

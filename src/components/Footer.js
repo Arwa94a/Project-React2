@@ -1,18 +1,32 @@
-import instagram from "../Images/instagram.png"
-import twitter from "../Images/twitter.png"
-import youtube1 from "../Images/youtube1.png"
+import { Container } from "react-bootstrap";
+
 function Footer() {
     return ( <>
-    
-    <Footer>
-    <section >
-        <p>Follow us<i class="fas fa-chevron-right"></i></p>
-        <a href="https://www.instagram.com/Tuwaiq_2030/"><img src={instagram} alt=""/></a>
-        <a href="https://twitter.com/Tuwaiq_2030"><img src={twitter} alt=""/></a>
-        <a href="https://www.youtube.com/channel/UCR0MZV9O8WHAwyMPv0M8m-A" ><img src={youtube1} alt=""/></a>
-    </section>
-
-    </Footer>
+    <Container class="footer">
+      <div class="wrapper">
+         
+         <div class="icon twitter">
+            <div class="tooltip">
+               Twitter
+            </div>
+            <span><i class="fab fa-twitter "> </i></span>
+         </div>
+         <div class="icon instagram">
+            <div class="tooltip">
+               Instagram
+            </div>
+            <span><i class="fab fa-instagram"></i></span>
+         </div>
+        
+         <div class="icon youtube">
+            <div class="tooltip">
+               YouTube
+            </div>
+            <span><i class="fab fa-youtube"> </i></span>
+         </div>
+      </div>
+      </Container>
+   
     
     </> );
 }

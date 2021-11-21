@@ -2,11 +2,14 @@
 import { Col,Row } from "react-bootstrap";
 import CarouselInfo from "../components/CarouselInfo";
 import ThreeCard from "../components/ThreeCard";
-import AboutUs from "../components/AboutUs";
+
 
 function Home() {
     return ( <>
-    <AboutUs />
+  <div className="home">
+  <h2>Programming Sit</h2>
+  <p> With progress and development and to achieve the vision, we created this site to learn programming</p>
+  </div>
    <CarouselInfo />
     
     

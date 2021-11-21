@@ -1,14 +1,13 @@
 import aboutus from "../Images/aboutus.png"
 function AboutUs() {
   return (
-    <div class="card bg-dark text-white  m-5" width="100px">
-      <img src={aboutus} class="card-img" alt="..." class="rounded mx-auto d-block" style={{opacity:0.4}}  />
+    <div class="card   aboutus" width="100px"style={{ border:"3px solid black"}}>
+      <img src={aboutus} class="card-img" alt="..." class="rounded mx-auto d-block " />
       <div class="card-img-overlay ">
-        <h5 class="card-title">About Us</h5>
-        <p class="card-text">
-        With progress and development and to achieve the vision, we created this site to learn programming
+        <h5 class="card-title1">About Us</h5>
+        <p class="card-text1">
+          With progress and development and to achieve the vision, we created this site to learn programming
         </p>
-        
       </div>
     </div>
   )

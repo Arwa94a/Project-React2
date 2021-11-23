@@ -2,13 +2,15 @@ import Asynchronous from "../Videojs/Asynchronous.mp4"
 import GetterSetter from "../Videojs/GetterSetter.mp4"
  import OptionalChaining from "../Videojs/OptionalChaining.mp4"
 import Oobject from "../Videojs/Oobject.mp4"
+import backgroundvid from "../Images/backgroundvid.png"
 
-import { Col, Row } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 
 function VidHtml() {
   return (
     <> 
-    
+    <Container>
+    <img src={backgroundvid} className="backGroundVid" alt="..." />
     <Row className="ms-5" >
     <Col> 
     <h2> Asynchronoust </h2>
@@ -48,6 +50,7 @@ function VidHtml() {
 </p>
       </Col>
      </Row>
+     </Container>
     </>
   )
 }

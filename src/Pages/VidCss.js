@@ -1,27 +1,32 @@
 import MoreLifeChangingCSSTips from "../Videocss/MoreLifeChangingCSSTips.mp4"
 import Flexbox from "../Videocss/Flexbox.mp4"
 import GRID from "../Videocss/GRID.mp4"
-import { Col, Row } from "react-bootstrap"
+import { Container, Row,Col } from "react-bootstrap"
+import backgroundvid from "../Images/backgroundvid.png"
 import Aanimation from "../Videocss/Aanimation.mp4"
+ 
 
 function VidCss() {
   return (
     <>
-      hhhhhhh
+    <Container>
+    <img src={backgroundvid} className="backGroundVid" alt="..." />
       <Row className="ms-5">
         <Col>
-          <video width="500" height="500" controls>
+        <h2> CSS Tooltips </h2>
+          <video width="500" height="500" controls >
             <source src={MoreLifeChangingCSSTips} type="video/mp4" />
           </video>
           <p class="text-center"> </p>
           <p class="text-center">
             {" "}
-            CSS Tooltips Tooltips are used to add information about an element on a web page. Tooltips appear in a
+            CSS Tooltips are used to add information about an element on a web page. Tooltips appear in a
             number of different places on websites, especially when the author of a site wants to clarify something or
             add a definition to a word in a block of tex{" "}
           </p>
         </Col>
         <Col>
+        <h2> Mardin </h2>
           <video width="500" height="500" controls>
             <source src={Flexbox} type="video/mp4" md="" />
           </video>
@@ -32,6 +37,7 @@ function VidCss() {
           </p>
         </Col>
         <Col>
+        <h2> Centering aling</h2>
           <video width="500" height="500" controls>
             <source src={Aanimation} type="video/mp4" />
           </video>
@@ -44,6 +50,7 @@ function VidCss() {
           </p>
         </Col>
         <Col>
+        <h2>Margin </h2>
           <video width="500" height="500" controls>
             <source src={GRID} type="video/mp4" md="" />
           </video>
@@ -54,8 +61,10 @@ function VidCss() {
           </p>
         </Col>
       </Row>
+      </Container>
     </>
   )
 }
+
 
 export default VidCss

@@ -1,10 +1,12 @@
 import java from "../Images/java.png"
 import html from "../Images/html.png"
 import css from "../Images/css.png"
+
 import { Link } from "react-router-dom"
 function ThreeCard() {
   return (
     <>
+     
     <h3>To Start learn any language programming Have To know About Css And Html</h3>
     <div class="d-flex justify-content-between m-5 ">
       <div class="card  " style={{ width: "18rem" }}>

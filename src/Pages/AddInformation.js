@@ -1,12 +1,15 @@
 import { useContext } from "react";
 import { Col, Form ,Row,Button} from "react-bootstrap";
 import DevelotContext from "../Uilts/DevelotContext";
+import think from "../Images/think.png"
 
 function AddInformation() {
   const {addInformation}=useContext(DevelotContext)
     return ( <>
     <div className="ms-4 mt-4 ">
-        <Form className="mt-5 " onSubmit={addInformation}>
+      
+        <Form class="addInformation" onSubmit={addInformation} style={{ marginTop: "100px"}}>
+        <img src={think}  />
           <Form.Group className="mb-3">
             <Form.Label>Title:</Form.Label>
             <Col md="6">

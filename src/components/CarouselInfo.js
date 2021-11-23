@@ -8,7 +8,7 @@ function CarouselInfo() {
     <>
      <Carousel className="m-5">
         <Carousel.Item class="vision">
-          <img className="d-block w-100" src={vision} alt="First slide" style={{ opacity: 0.5, height: "500px" }} />
+          <img className="d-block w-100 carouselImg " src={vision} alt="First slide"  />
           <Carousel.Caption>
             <Link className="nav-link" to="/vision">
               {" "}
@@ -22,7 +22,7 @@ function CarouselInfo() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100 " src={learn} alt="Second slide" style={{ opacity: 0.5, height: "500px" }} />
+          <img className="d-block w-100 carouselImg " src={learn} alt="Second slide"  />
 
           <Carousel.Caption>
             <Link className="nav-link" to="/Learn">
@@ -33,7 +33,7 @@ function CarouselInfo() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={links} alt="Third slide" style={{ opacity: 0.5, height: "500px" }} />
+          <img className="d-block w-100 carouselImg"  src={links} alt="Third slide"  />
 
           <Carousel.Caption>
             <Link className="nav-link" to="/PlatForms">

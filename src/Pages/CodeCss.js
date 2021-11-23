@@ -1,6 +1,8 @@
 import Selector from "../Images/Selector.gif"
 function CodeCss() {
+
     return (  <>
+    <div className="codestyle">
     <h1>CSS Syntax</h1>
     <img src={Selector}/>
     <p>The selector points to the HTML element you want to style.
@@ -44,6 +46,8 @@ p {
 <li>background-repeat</li>
 <li>background-attachment</li>
 <li>background-position</li>
+
+</div>
 
     </>);
 }

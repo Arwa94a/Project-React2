@@ -5,6 +5,7 @@ import DevelotContext from "../Uilts/DevelotContext"
 
 function Information() {
     const {informations}=useContext(DevelotContext)  
+   
     return (<>
        <Container><Row xs={1} sm={2} md={4} className="g-4">
    
@@ -13,7 +14,7 @@ function Information() {
        <CardInformation information={information}/>
        ))}
     
-   </Row> </Container>);
+   </Row> </Container>
     
     </>)
 }

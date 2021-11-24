@@ -104,6 +104,7 @@ function PlatForm() {
         </div>
     </div>
         </Col>
+        <img id="imageBackground" src="https://safcsp-platform-assets.s3-eu-west-1.amazonaws.com/login-banner-4.png"></img>
     </Row>
     
 

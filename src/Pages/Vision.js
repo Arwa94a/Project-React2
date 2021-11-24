@@ -19,7 +19,8 @@ The Kingdom, which ranked first in the world in terms of the number of events he
       Tuwaiq Academy offers a number of programming bootcamps, intensive and short courses,
        in addition to launching Satr Learning platform to be the first
         Arabian platform specialized in the fields of modern technology in Arabic language.</h3>
-        </div> </> );
+        </div>
+        <img id="imageBackground" src="https://safcsp-platform-assets.s3-eu-west-1.amazonaws.com/login-banner-3.png"></img> </> );
 }
 
 export default Vision;

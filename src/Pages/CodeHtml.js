@@ -1,7 +1,10 @@
+import { Col, Row } from "react-bootstrap";
 import TableHtml from "../Images/TableHtml.gif"
 function CodeHtml() {
     return ( <>
-    <div className="back-">
+    <Row>
+        <Col>
+    <div>
     <h1>HTML Computer Code Elements</h1>
     <p>HTML contains several elements for defining user input and computer code.</p>
     <h3>Example</h3>
@@ -67,7 +70,9 @@ In HTML there are some semantic elements that can be used to define different pa
     </div>
    
 </div>
-
+</Col>
+<Col></Col>
+</Row>
 
     </> );
 }

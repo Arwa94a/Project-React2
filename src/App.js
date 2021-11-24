@@ -22,34 +22,27 @@ import CodeCss from "./Pages/CodeCss"
 import VidCss from "./Pages/VidCss"
 import AddInformation from "./Pages/AddInformation"
 import Profile from "./Pages/Profile"
-import Public from "./components/Public"
+
 import OneInformation from "./Pages/OneInformation"
+import Public from "./Pages/Public"
 
 function App() {
   const [informations, setInformations] = useState([])
-  const [weathers,setWeathers]=useState([])
+const [publicInfo,setPublic]=useState([])
   const [profile, setProfile] = useState(null)
+  const [errorSignup, setErrorSignup] = useState(null)
+  const [errorLogin, setErrorLogin] = useState(null)
   const navigate = useNavigate()
-/*******************************Api weathers********************************************* */
-const Weathers =async ()=>{
-try {navigator.geolocation.getCurrentPosition(function(position){
-  //console.log("seccess")
-  //console.log("position:", position)
-  const lon= position.coords.longitude
-  const lat=position.coords.latitude
-  
-axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=&units=metric&lang=eng").then(response=>{
-  setWeathers(response.data)
-  console.log("weathers:",response.data)
- 
- 
-})})}catch(error){
-  console.log(error.response.data)
-}
-
-
-}
-
+  /*******************************Api********************************************* */
+  const getPublic = async () => {
+    try {
+      const response = await axios.get("https://calendarific.com/api/v2/holidays?&api_key=f970bcbc58113e3e1f9349f445553320bd56b0ff&country=sa&year=2021")
+      setPublic(response.data.response.holidays)
+       console.log(response.data.response.holidays)
+    } catch (error) {
+      console.log(error.response.data)
+    }
+  }
   /**********************************API ************************************* */
   const getInformations = async () => {
     try {
@@ -82,10 +75,9 @@ axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="
     }
   }
   /*********************************put********************************* */
-  const confirmInformation =async(e,id)=>{
-    e.preventDefault() 
-    
-    
+  const confirmInformation = async (e, id) => {
+    e.preventDefault()
+
     try {
       const form = e.target
       const confirmBody = {
@@ -99,12 +91,11 @@ axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="
         },
       })
       getInformations()
-      
     } catch (error) {
       console.log(error.response.data)
     }
   }
-  
+
   /*******************************delete********************************* */
   const deletInformation = async e => {
     const informationId = e.target.id
@@ -124,9 +115,8 @@ axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="
   useEffect(() => {
     console.log("useEffect", useEffect)
     getInformations()
-    Weathers()
-    
-   
+    //getPublic()
+
     if (localStorage.tokenJs) {
       getProfile()
     }
@@ -160,8 +150,10 @@ axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="
       }
       await axios.post("https://vast-chamber-06347.herokuapp.com/api/user", informationBody)
       navigate("/login")
+      
     } catch (error) {
       console.log(error.response.data)
+      setErrorSignup(error.response.data)
     }
   }
 
@@ -181,6 +173,7 @@ axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="
       navigate("/")
     } catch (error) {
       console.log(error.response.data)
+      setErrorLogin(error.response.data)
     }
   }
   /*****************************logout*************************************** */
@@ -196,9 +189,10 @@ axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="
     addInformation: addInformation,
     deletInformation: deletInformation,
     profile: profile,
-    confirmInformation :confirmInformation ,
-    weathers:weathers,
-   
+    confirmInformation: confirmInformation,
+    publicInfo:publicInfo,
+    errorSignup:errorSignup,
+    errorLogin:errorLogin,
   }
   return (
     <>
@@ -217,7 +211,6 @@ axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="
           <Route path="/css" element={<Css />} />
           <Route path="/codecss" element={<CodeCss />} />
           <Route path="/vidcss" element={<VidCss />} />
-
           <Route path="/vidjs" element={<VidJs />} />
           <Route path="/vision" element={<Vision />} />
           <Route path="/Learn" element={<Learn />} />
@@ -228,9 +221,10 @@ axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="
           <Route path="/add-information" element={<AddInformation />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/public-information" element={<Public />} />
-          <Route path="information/:informationId" element={<OneInformation/>}/>
+
+          <Route path="information/:informationId" element={<OneInformation />} />
         </Routes>
-        
+
         <Footer />
       </DevelotContext.Provider>
     </>

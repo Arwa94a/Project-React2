@@ -14,22 +14,21 @@ function Profile() {
 
   return (
     <>
-      <Container>
+      <Container style={{ marginTop: "100px"}}>
         <Card>
           <Row>
             <Col>
-              {" "}
-              <img src={profile.photo} height="200" />
+              <img src={profile.photo} height="200"  class="profileimg"/>
             </Col>
           </Row>
           <Row>
             <Col>
-              <h3>{profile.firstName}</h3> <h3>{profile.lastName}</h3>
+              <h3 class="profileH">{profile.firstName}</h3> <h3 class="profileH">{profile.lastName}</h3>
             </Col>
           </Row>
           <Row>
             <Col>
-              <h5>{profile.email}</h5>
+              <h5 class="profileH">{profile.email}</h5>
             </Col>
           </Row>
         </Card>

@@ -20,22 +20,22 @@ function CardInformation(props) {
  
       <Col style={{ marginTop: "100px"}} >
         <Card >
-          <Card.Img variant="top" src={information.image} />
-          <Card.Body>
-            <Card.Title>{information.title}</Card.Title>
+          <Card.Img variant="top" src={information.image} style={{height:"200px"}}  />
+          <Card.Body  style={{ background: "rgb(165, 157, 157,.6)"}} >
+            <Card.Title style={{ color: "rgb(60, 106, 114)"}} >{information.title}</Card.Title>
             <Card.Text>{information.description}</Card.Text>
             {inProfile ? (
               <>
-                <Button variant="danger" onClick={deletInformation} id={information._id}>
+                <Button variant="danger" className="me-2"onClick={deletInformation} id={information._id}>
                   Delete
                 </Button>
-                <Button variant="success" className="me-2" onClick={handleOpen}>
+                <Button variant="success"  onClick={handleOpen}>
                   edit
                 </Button>
               </>
             ) : (
-              <Link className="btn btn-primary" to={`/information/${information._id}`}>
-                View
+              <Link className="btn" to={`/information/${information._id}`}><a class="view"> View</a>
+              
               </Link>
             )}
           </Card.Body>

@@ -1,13 +1,17 @@
 import { Col, Row } from "react-bootstrap";
 import Selector from "../Images/Selector.gif"
-import csscode2 from "../Images/csscode2.png"
+import sidecss from "../Images/sidecss.png"
+import codelern from "../Images/codelern.jpg"
 function CodeCss() {
 
     return (  <>
-    <Row className="codestyle">
-      <Col>
-    <div className="codestyle">
-    <h1 className="code">CSS Syntax</h1>
+    <Row className="background">
+      
+      <Col className="codestyle">
+    <div >
+    
+    <h1 className="code" className="title-code">CSS Syntax</h1>
+   
     <img src={Selector}/>
  
     <p className="pclass">The selector points to the HTML element you want to style.
@@ -17,7 +21,7 @@ The declaration block contains one or more declarations separated by semicolons.
 Each declaration includes a CSS property name and a value, separated by a colon.
 
 Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
-<h1>Example</h1>
+<h1 className="title-code">Example</h1>
 <b>In this example all {"<p>"} elements will be center-aligned, with a red text color:</b>
 <p>{"p {"}
   color: red;
@@ -30,8 +34,8 @@ Multiple CSS declarations are separated with semicolons, and declaration blocks 
 <li>text-align is a property, and center is the property value</li>
 </ul>
 
-
-<h1>CSS Comments</h1>
+{/* <img src={codelern} style={{height:"150px"}} /> */}
+<h1 className="title-code">CSS Comments</h1>
 <p>Comments are used to explain the code, and may help when you edit the source code at a later date.
 
 Comments are ignored by browsers.</p>
@@ -43,7 +47,7 @@ p {
   "{color: red;}"
 }</p>
 
-<h1>CSS Backgrounds</h1>
+<h1 className="title-code">CSS Backgrounds</h1>
 <h3>In these chapters, you will learn about the following CSS background properties:</h3>
 
 <li>background-color</li>
@@ -54,7 +58,7 @@ p {
 
 </div>
 </Col>
-<Col><img src={csscode2} className="imgecsscode"/></Col>
+<Col><img src={sidecss} className="imgecsscode"/></Col>
 </Row>
     </>);
 }

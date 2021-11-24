@@ -33,6 +33,7 @@ const [publicInfo,setPublic]=useState([])
   const [errorSignup, setErrorSignup] = useState(null)
   const [errorLogin, setErrorLogin] = useState(null)
   const navigate = useNavigate()
+<<<<<<< Updated upstream
   /*******************************Api********************************************* */
   const getPublic = async () => {
     try {
@@ -43,6 +44,28 @@ const [publicInfo,setPublic]=useState([])
       console.log(error.response.data)
     }
   }
+=======
+/*******************************Api weathers********************************************* */
+const Weathers =async ()=>{
+try {navigator.geolocation.getCurrentPosition(function(position){
+  //console.log("seccess")
+  //console.log("position:", position)
+  const lon= position.coords.longitude
+  const lat=position.coords.latitude
+  
+axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=&units=metric&lang=eng").then(response=>{
+  setWeathers(response.data)
+  console.log("weathers:",response.data)
+ 
+ 
+})})}catch(error){
+  console.log(error.response.data)                                                              
+}
+
+
+}
+
+>>>>>>> Stashed changes
   /**********************************API ************************************* */
   const getInformations = async () => {
     try {

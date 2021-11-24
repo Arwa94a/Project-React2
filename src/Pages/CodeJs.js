@@ -1,7 +1,12 @@
+import { Row,Col } from "react-bootstrap";
+import sidejs from "../Images/sidejs.png"
+
 function CodeJs() {
     return (<>
+    <Row className="background">
+      <Col>  
     <div className="codestyle">
-    <h1>JavaScript Syntax</h1>
+    <h1 className="title-code">JavaScript Syntax</h1>
     <p>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
     <b>// How to create variables:
 var x;
@@ -33,7 +38,7 @@ Variable values are called Variables</h4>
 <h6>1001</h6>
 
 
-<h1>Math Properties (Constants)</h1>
+<h1 className="title-code">Math Properties (Constants)</h1>
 <h2>The syntax for any Math property is : Math.property.</h2>
 
 <h3>JavaScript provides 8 mathematical constants that can be accessed as Math properties:</h3>
@@ -48,10 +53,10 @@ Variable values are called Variables</h4>
 <li>Math.LOG2E  </li>  // returns base 2 logarithm of E
 <li>Math.LOG10E  </li> // returns base 10 logarithm of E
     
-<h1>Math.random()</h1>
+<h1 className="title-code">Math.random()</h1>
 <p>Math.random() returns a random number between 0 (inclusive),  and 1 (exclusive)</p>
 
-<h1>Conditional Statementsv</h1>
+<h1 className="title-code">Conditional Statementsv</h1>
 <p>Very often when you write code, you want to perform different actions for different decisions.
 
 You can use conditional statements in your code to do this.</p>
@@ -63,6 +68,10 @@ You can use conditional statements in your code to do this.</p>
 <li>Use else if to specify a new condition to test, if the first condition is false</li>
 <li>Use switch to specify many alternative blocks of code to be executed</li>
 </div>
+</Col>
+
+<Col><img src={sidejs} className="imgecsscode" /></Col>
+</Row>
     </>  );
 }
 

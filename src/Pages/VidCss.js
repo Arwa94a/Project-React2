@@ -26,14 +26,13 @@ function VidCss() {
           </p>
         </Col>
         <Col>
-        <h2> Mardin </h2>
+        <h2>Flexbox </h2>
           <video width="500" height="500" controls>
             <source src={Flexbox} type="video/mp4" md="" />
           </video>
           <p class="text-center">
             {" "}
-            who to Mardin in html and cssThe margin specifies a shorthand property for setting the margin properties in
-            one{" "}
+            Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items{" "}
           </p>
         </Col>
         <Col>

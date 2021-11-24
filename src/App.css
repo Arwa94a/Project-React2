@@ -237,51 +237,71 @@ a.nav1:hover {
 
 
 div.codestyle {
-  
-  
+
+
   background-repeat: repeat;
- background-size: auto;
- background-color: wheat;
+  background-size: auto;
+  /* background-color: wheat; */
   background-position: bottom;
   text-align: start;
   justify-items: flex-end;
   margin-top: 100px;
-  margin-left: 3px;
+  margin-left: 10px;
+  margin-right: 0;
+  justify-content: space-around;
 
-  
+
   /* list-style: inside; */
 
 }
-.pclass{
+
+div Col .codestyle {
+
+  border-radius: 30px;
+
+}
+
+.pclass {
   margin: 20px;
 }
 
-.imgecsscode{
+.imgecsscode {
 
-   display: flex;
-
-   padding-left: 1100px;
-   padding-right: 10px;
-padding-bottom: 100px;
   height: 300px;
-  margin-bottom: 700px;
-  margin: 20px;
-
-
-
-
-
+  margin-top: 600px;
+  margin-left: 180px;
 }
 
-div.codestyle h1 {
- 
+.background {
+  /* backgroundstyle; */
+  /* background-color: rgb(253, 244, 231); */
+}
+
+div.h1 {
+
   size: 100px;
 
 }
 
 h1.code {
   font-family: Arial, Helvetica, sans-serif;
-  color: antiquewhite;
+  /* color: antiquewhite; */
+}
+
+.title-code {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  
+
+  color: #b19e83;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.code-write{
+  color: green;
 }
 
 .signup-contaner>form input {

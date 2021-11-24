@@ -1,4 +1,3 @@
-/************************************ navbar********************************/
 
 /************************************ navbar********************************/
 .navbar {
@@ -25,7 +24,7 @@
   position: fixed;
   top: 0%;
   left: 0%;
-  background-color: rgb(194, 58, 41);
+  background-color: rgb(182, 48, 7);
 
   border-radius: 0px 40px 40px 0px;
   z-index: 3;
@@ -144,7 +143,16 @@ a.nav1:hover {
 
   line-height: 2;
 }
+#imageBackground{
+  max-width: 900px;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  opacity: 0.3;
+  bottom: 0;
 
+}
 
 
 /**********************signup***************************/
@@ -159,29 +167,6 @@ a.nav1:hover {
   font-family: fantasy;
   margin-top: 100px;
   position: relative;
-
-
-}
-
-.wave {
-  height: 200px;
-  border-radius: 90%;
-}
-
-.signup-contaner>form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-top: 100px;
-  margin: 100px;
-  margin-top: 0ex;
-  gap: 30px;
-
-
-
-
-
 
 
 }
@@ -317,19 +302,18 @@ h1.code {
   text-transform: uppercase;
   text-align: center;
   padding: 50px;
-  color: lightsalmon;
+  color: rgb(25, 108, 146);
   text-shadow: 2px 2px 7px black;
 }
 
 .home p {
   font-size: 30px;
   text-align: justify;
-  padding: 30px;
-  margin: 30px;
+  padding: 0px;
+  margin: 90px;
   font-family: cursive;
 
 }
-
 
 /***************************carousel**********************************/
 img.carouselImg {
@@ -390,17 +374,21 @@ img.carouselImg {
 .threeH3 {
   color: #a16812;
   margin-left: 30px;
-  margin-top: 300px;
+  margin-top: 200px;
+  margin-bottom: 100px;
   font-weight: bolder;
-  border: 3px solid black;
+ font-family: 'Courier New', Courier, monospace;
   text-align: center;
+  font-size: 40px;
 }
 
 .threeCard {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 60px;
 
 }
+
 
 /******************************vision********************************************/
 .vision-2 {
@@ -533,9 +521,47 @@ img.carouselImg {
   display: flex;
   justify-content: center;
   align-content: center;
-  border-radius: 60px;
+  border-radius: 80px;
   margin: auto;
+  transition: 1s;
+  position: relative;
+  top:0;
+  
 
+}
+img.learn:hover{
+  
+top: -20px;
+  }
+  .learn ~h3{
+    color: #DE463B;
+  }
+  .learn ~h1{
+    color: green;
+    text-shadow: 2px 2px 7px rgb(105, 61, 61); 
+    font-size: 50px;
+  }
+/**************************************add information****************************************************/
+
+.addh3{
+  color: #a16812;
+}
+.addlable {
+ 
+  color: #46C1F6;
+ font-size: 20px;
+ font-weight: bolder;
+  
+}
+/*************************************profile********************************************************/
+.profileH{
+  
+  display: flex;
+  justify-content: center;
+  color: #531611;
+}
+.profileimg{
+  border-radius: 30%;
 }
 
 /*********************************************CardInformation***************************************************/
@@ -543,6 +569,20 @@ img.carouselImg {
   margin-top: 200px;
   text-align: center;
 
+}
+.view {
+  display: inline-block;
+  background-color: rgb(196, 142, 142);
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 20%;
+ 
+
+}
+.view:hover{
+  opacity: .5;
+  color: white;
 }
 
 @media(max-width:800px) {
@@ -595,6 +635,13 @@ img.carouselImg {
     margin-top: 200px;
 
   }
+  .addlable {
+    display: flex;
+    justify-content: center;}
+    .wave1{
+      display: none
+      ;
+    }
 
 
 }

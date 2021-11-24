@@ -4,12 +4,12 @@ import { Alert, Col, Row } from "react-bootstrap"
 import DevelotContext from "../Uilts/DevelotContext"
 import { useContext } from "react";
 import backsignup from "../Images/backsignup.png"
-import Public from "../components/Public";
+import Public from "./Public";
 function SignUp() {
     const {signUp,errorSignup}=useContext(DevelotContext)
   return (
     <>
-   <Public/>
+
         <img className="backsignup"  src={backsignup}/>
     <h2 class="welcome">Welcome</h2>
 

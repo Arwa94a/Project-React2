@@ -11,16 +11,16 @@ function OneInformation() {
     return null
   }
   return (
-    <Container className="mt-5 mb-3 "style={{ marginTop: "100px"}} >
-      <Row className="d-flex align-item-center justify-content-center">
+    <Container style={{ marginTop: "150px"}} >
+      <Row className="d-flex align-item-center justify-content-center g-2"  style={{ margin: "100px" }}>
         <Col md={2}>
-          <h3>owner</h3>
+          <h3 style={{ color:"#f667" ,textAlign:"center"}}>OWNER</h3>
         </Col>
         <Col md={3}>
-          <Image src={information._user.photo} style={{ height: 200 }} />
+          <Image src={information._user.photo} style={{ height: 200 ,borderRadius:"40px",marginLeft:"60px"}} />
         </Col>
         <Col md={4}>
-          <h3>
+          <h3  style={{ color:"green" ,textAlign:"center"}}>
             {information._user.firstName}
             {information._user.lastName}
           </h3>
@@ -33,10 +33,10 @@ function OneInformation() {
         <Col>
           <Card>
             <Card.Header>
-              <Card.Title className="text-center">{information.title}</Card.Title>
+              <Card.Title className="text-center" style={{ color:"#ff6879" ,textAlign:"center"}}>{information.title}</Card.Title>
             </Card.Header>
             <Card.Body stylle={{ height: 200 }}>
-              <Card.Text className="text-center">{information.description}</Card.Text>
+              <Card.Text className="text-center" style={{ textAlign:"center"}}>{information.description}</Card.Text>
             </Card.Body>
           </Card>
         </Col>

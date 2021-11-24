@@ -1,4 +1,4 @@
-import { Carousel } from "react-bootstrap"
+import { Carousel, Col, Row } from "react-bootstrap"
 import vision from "../Images/vision.png"
 import learn from "../Images/learn.png"
 import links from "../Images/links.png"
@@ -6,7 +6,9 @@ import { Link } from "react-router-dom"
 function CarouselInfo() {
   return (
     <>
-     <Carousel className="m-5">
+    <Row >
+      <Col md="8" className="mx-auto">
+     <Carousel className="m-5" style={{borderRadius:"40px", border:"1px solid black",padding:"40px"}}>
         <Carousel.Item class="vision">
           <img className="d-block w-100 carouselImg " src={vision} alt="First slide"  />
           <Carousel.Caption>
@@ -44,6 +46,8 @@ function CarouselInfo() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      </Col>
+      </Row>
     </>
   )
 }

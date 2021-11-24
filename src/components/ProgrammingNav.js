@@ -21,6 +21,12 @@ function ProgrammingNav() {
               Information
             </Link>
           </li>
+
+          <li>
+            <Link to="/api" className="nav-link nav1">
+             API
+            </Link>
+          </li>
           {localStorage.tokenJs ? (
             <li className="me-auto">
               <Link to="/add-information" className="nav-link nav1">

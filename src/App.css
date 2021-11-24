@@ -246,20 +246,57 @@ a.nav1:hover {
 
 }
 
-div.codestyle {
+.ms-5 h2 {
+  margin-top: 100px;
+}
 
-  background-color: antiquewhite;
-  text-align: center;
+
+div.codestyle {
+  
+  
+  background-repeat: repeat;
+ background-size: auto;
+ background-color: wheat;
+  background-position: bottom;
+  text-align: start;
   justify-items: flex-end;
   margin-top: 100px;
-  list-style: inside;
+  margin-left: 3px;
+
+  
+  /* list-style: inside; */
+
+}
+.pclass{
+  margin: 20px;
+}
+
+.imgecsscode{
+
+   display: flex;
+
+   padding-left: 1100px;
+   padding-right: 10px;
+padding-bottom: 100px;
+  height: 300px;
+  margin-bottom: 700px;
+  margin: 20px;
+
+
+
+
 
 }
 
 div.codestyle h1 {
-  text-shadow: blue;
+ 
   size: 100px;
 
+}
+
+h1.code {
+  font-family: Arial, Helvetica, sans-serif;
+  color: antiquewhite;
 }
 
 .signup-contaner>form input {

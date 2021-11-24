@@ -1,11 +1,16 @@
+import { Col, Row } from "react-bootstrap";
 import Selector from "../Images/Selector.gif"
+import csscode2 from "../Images/csscode2.png"
 function CodeCss() {
 
     return (  <>
+    <Row className="codestyle">
+      <Col>
     <div className="codestyle">
-    <h1>CSS Syntax</h1>
+    <h1 className="code">CSS Syntax</h1>
     <img src={Selector}/>
-    <p>The selector points to the HTML element you want to style.
+ 
+    <p className="pclass">The selector points to the HTML element you want to style.
 
 The declaration block contains one or more declarations separated by semicolons.
 
@@ -48,7 +53,9 @@ p {
 <li>background-position</li>
 
 </div>
-
+</Col>
+<Col><img src={csscode2} className="imgecsscode"/></Col>
+</Row>
     </>);
 }
 

@@ -1,7 +1,7 @@
 import TableHtml from "../Images/TableHtml.gif"
 function CodeHtml() {
     return ( <>
-    <div className="back-">
+    <div className="codestyle">
     <h1>HTML Computer Code Elements</h1>
     <p>HTML contains several elements for defining user input and computer code.</p>
     <h3>Example</h3>

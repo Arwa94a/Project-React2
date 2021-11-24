@@ -1,5 +1,6 @@
 function CodeJs() {
     return (<>
+    <div className="codestyle">
     <h1>JavaScript Syntax</h1>
     <p>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
     <b>// How to create variables:
@@ -61,6 +62,7 @@ You can use conditional statements in your code to do this.</p>
 <li>Use else to specify a block of code to be executed, if the same condition is false</li>
 <li>Use else if to specify a new condition to test, if the first condition is false</li>
 <li>Use switch to specify many alternative blocks of code to be executed</li>
+</div>
     </>  );
 }
 

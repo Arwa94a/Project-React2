@@ -33,7 +33,7 @@ const [publicInfo,setPublic]=useState([])
   const [errorSignup, setErrorSignup] = useState(null)
   const [errorLogin, setErrorLogin] = useState(null)
   const navigate = useNavigate()
-  /*******************************Api********************************************* */
+  /*******************************Api bublic********************************************* */
   const getPublic = async () => {
     try {
       const response = await axios.get("https://calendarific.com/api/v2/holidays?&api_key=f970bcbc58113e3e1f9349f445553320bd56b0ff&country=sa&year=2022")

@@ -58,8 +58,7 @@ p {
 
 </div>
 </Col>
-<Col md="4"><img src={sidecss}className="imgecsscode"/>
-</Col>
+<Col md="4"><img src={sidecss}className="imgecsscode"/></Col>
 </Row>
     </>);
 }

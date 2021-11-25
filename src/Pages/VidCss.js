@@ -10,10 +10,10 @@ function VidCss() {
   return (
     <>
     <Container>
-    <img src={backgroundvid} className="backGroundVid" alt="..." />
+    <img id="imageBackground" src="https://safcsp-platform-assets.s3-eu-west-1.amazonaws.com/login-banner-2.png"/>
       <Row className="ms-5">
-        <Col>
-        <h2> CSS Tooltips </h2>
+        <Col md="12">
+        <h2 class="vidProgram"> CSS Tooltips </h2>
           <video width="500" height="500" controls >
             <source src={MoreLifeChangingCSSTips} type="video/mp4" />
           </video>
@@ -25,8 +25,8 @@ function VidCss() {
             add a definition to a word in a block of tex{" "}
           </p>
         </Col>
-        <Col>
-        <h2>Flexbox </h2>
+        <Col md="12">
+        <h2 class="vidProgram">Flexbox </h2>
           <video width="500" height="500" controls>
             <source src={Flexbox} type="video/mp4" md="" />
           </video>
@@ -35,8 +35,8 @@ function VidCss() {
             Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items{" "}
           </p>
         </Col>
-        <Col>
-        <h2> Centering aling</h2>
+        <Col md="12">
+        <h2 class="vidProgram"> Centering aling</h2>
           <video width="500" height="500" controls>
             <source src={Aanimation} type="video/mp4" />
           </video>
@@ -48,8 +48,8 @@ function VidCss() {
             style have a property to align the elements with the center position.{" "}
           </p>
         </Col>
-        <Col>
-        <h2>Margin </h2>
+        <Col md="12">
+        <h2 class="vidProgram">Margin </h2>
           <video width="500" height="500" controls>
             <source src={GRID} type="video/mp4" md="" />
           </video>

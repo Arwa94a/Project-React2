@@ -36,7 +36,7 @@ const [publicInfo,setPublic]=useState([])
   /*******************************Api********************************************* */
   const getPublic = async () => {
     try {
-      const response = await axios.get("https://calendarific.com/api/v2/holidays?&api_key=f970bcbc58113e3e1f9349f445553320bd56b0ff&country=sa&year=2021")
+      const response = await axios.get("https://calendarific.com/api/v2/holidays?&api_key=f970bcbc58113e3e1f9349f445553320bd56b0ff&country=sa&year=2022")
       setPublic(response.data.response.holidays)
        console.log(response.data.response.holidays)
     } catch (error) {
@@ -220,7 +220,7 @@ const [publicInfo,setPublic]=useState([])
           <Route path="/information" element={<Information />} />
           <Route path="/add-information" element={<AddInformation />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/public-information" element={<Public />} />
+          <Route path="/api" element={<Public />} />
 
           <Route path="information/:informationId" element={<OneInformation />} />
         </Routes>

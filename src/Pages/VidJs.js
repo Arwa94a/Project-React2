@@ -10,10 +10,10 @@ function VidHtml() {
   return (
     <> 
     <Container>
-    <img src={backgroundvid} className="backGroundVid" alt="..." />
+    <img id="imageBackground" src="https://safcsp-platform-assets.s3-eu-west-1.amazonaws.com/login-banner-2.png"/>
     <Row className="ms-5" >
-    <Col> 
-    <h2> Asynchronoust </h2>
+    <Col md="12"> 
+    <h2 class="vidProgram"> Asynchronoust </h2>
       <video width="500" height="500" controls> 
       
         <source src={Asynchronous} type="video/mp4" />
@@ -21,8 +21,8 @@ function VidHtml() {
       </video>
     <p class="text-center">How Does Async/Await Work in JavaScrip?Async means asynchronous. It allows a program to run a function without freezing the entire program. This is done using the Async/Await keyword. Async/Await makes it easier to write promises. The keyword ‘async’ before a function makes the function return a promise </p>
       </Col>
-      <Col>
-      <h2> Getter And Sertter </h2>
+      <Col md="12">
+      <h2 class="vidProgram"> Getter And Sertter </h2>
       <video width="500" height="500" controls>
         <source src={GetterSetter} type="video/mp4"md="" />
         
@@ -30,10 +30,8 @@ function VidHtml() {
      <p class="text-center"> As a rule, there exist two object property types: data properties and accessor properties. All the properties we represented before are data properties. Accessor properties are relatively new and execute on getting and setting values. However, they seem like a regular property to the external code.</p>
       </Col>
       
-       </Row>
-       <Row className="ms-5">
-      <Col> 
-      <h2> Optional Chaining </h2> 
+      <Col md="12"> 
+      <h2 class="vidProgram"> Optional Chaining </h2> 
       <video width="500" height="500" controls>
         <source src={OptionalChaining} type="video/mp4" md="3" />
        
@@ -41,8 +39,8 @@ function VidHtml() {
 
       <p class="text-center">Optional chaining, represented by ?. in JavaScript, is a new feature introduced in ES2020. Optional chaining changes the way properties are accessed from deeply nested objects. It fixes the problem of having to do multiple null checks when accessing a long chain of object properties in Java Script</p>
      </Col>
-      <Col>
-       <h2>Object In Java Script</h2>
+      <Col md="12">
+       <h2 class="vidProgram">Object In Java Script</h2>
       <video width="500" height="500" controls>
         <source src={Oobject} type="video/mp4" />
          </video>

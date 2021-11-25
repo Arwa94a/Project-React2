@@ -7,7 +7,7 @@ function CodeCss() {
     return (  <>
     <Row className="background">
       
-      <Col className="codestyle">
+      <Col md="8" className="codestyle">
     <div >
     
     <h1 className="code" className="title-code">CSS Syntax</h1>
@@ -58,7 +58,7 @@ p {
 
 </div>
 </Col>
-<Col><img src={sidecss} className="imgecsscode"/></Col>
+<Col md="4"><img src={sidecss}className="imgecsscode"/></Col>
 </Row>
     </>);
 }

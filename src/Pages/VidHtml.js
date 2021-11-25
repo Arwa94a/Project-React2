@@ -10,19 +10,19 @@ function VidHtml() {
   return (
     <>
      <Container> 
-    <img src={backgroundvid} className="backGroundVid" alt="..." />
+     <img id="imageBackground" src="https://safcsp-platform-assets.s3-eu-west-1.amazonaws.com/login-banner-2.png"/>
     <Row className="ms-5" >
-    <Col>
+    <Col md="12">
     
-    <h2> Centering in Html</h2>
+    <h2 class="vidProgram"> Centering in Html</h2>
       <video width="500" height="500" controls>
         <source src={vidhtml2} type="video/mp4" />
        
       </video>
     <p class="text-center"> who to do centering align in html? The center tag is one of the HTML tags; when we use these tags in the document, it will align the paragraphs or words or any text, values it can be aligned with the center position of the web pages. In Html, these tags will use all the versions except Html5 instead of that CSS style have a property to align the elements with the center position. </p>
       </Col>
-      <Col>
-      <h2> Margin in Html</h2>
+      <Col md="12">
+      <h2 class="vidProgram"> Margin in Html</h2>
       <video width="500" height="500" controls>
         <source src={MarginsinHtmlandCss} type="video/mp4"md="" />
         
@@ -32,8 +32,8 @@ function VidHtml() {
       
        </Row>
        <Row className="ms-5">
-      <Col>  
-      <h2> Index in HTML </h2>
+      <Col md="12">  
+      <h2 class="vidProgram"> Index in HTML </h2>
       <video width="500" height="500" controls>
         <source src={vidhtml2} type="video/mp4" md="3" />
        
@@ -42,7 +42,7 @@ function VidHtml() {
       <p class="text-center">Index in html The index.html page is the most common name used for the default page shown on a website if no other page is specified when a visitor requests the site. In other words, index.html is the name used for the homepage of the website. Websites are built inside of directories on a web serve</p>
      </Col>
       <Col>
-      <h2> Html Callback </h2>
+      <h2 class="vidProgram"> Html Callback </h2>
       <video width="500" height="500" controls>
         <source src={vidhtml3} type="video/mp4" />
          </video>

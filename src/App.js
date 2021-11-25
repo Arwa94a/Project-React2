@@ -33,39 +33,16 @@ const [publicInfo,setPublic]=useState([])
   const [errorSignup, setErrorSignup] = useState(null)
   const [errorLogin, setErrorLogin] = useState(null)
   const navigate = useNavigate()
-<<<<<<< Updated upstream
-  /*******************************Api********************************************* */
+  /*******************************Api bublic********************************************* */
   const getPublic = async () => {
     try {
-      const response = await axios.get("https://calendarific.com/api/v2/holidays?&api_key=f970bcbc58113e3e1f9349f445553320bd56b0ff&country=sa&year=2021")
+      const response = await axios.get("https://calendarific.com/api/v2/holidays?&api_key=f970bcbc58113e3e1f9349f445553320bd56b0ff&country=sa&year=2022")
       setPublic(response.data.response.holidays)
        console.log(response.data.response.holidays)
     } catch (error) {
       console.log(error.response.data)
     }
   }
-=======
-/*******************************Api weathers********************************************* */
-const Weathers =async ()=>{
-try {navigator.geolocation.getCurrentPosition(function(position){
-  //console.log("seccess")
-  //console.log("position:", position)
-  const lon= position.coords.longitude
-  const lat=position.coords.latitude
-  
-axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=&units=metric&lang=eng").then(response=>{
-  setWeathers(response.data)
-  console.log("weathers:",response.data)
- 
- 
-})})}catch(error){
-  console.log(error.response.data)                                                              
-}
-
-
-}
-
->>>>>>> Stashed changes
   /**********************************API ************************************* */
   const getInformations = async () => {
     try {
@@ -243,7 +220,7 @@ axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="
           <Route path="/information" element={<Information />} />
           <Route path="/add-information" element={<AddInformation />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/public-information" element={<Public />} />
+          <Route path="/api" element={<Public />} />
 
           <Route path="information/:informationId" element={<OneInformation />} />
         </Routes>

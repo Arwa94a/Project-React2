@@ -1,6 +1,6 @@
 
 import { Col,Row } from "react-bootstrap";
-import CarouselInfo from "../components/CarouselInfo";
+import InfoImage from "../components/InfoImage";
 import ThreeCard from "../components/ThreeCard";
 
 
@@ -14,10 +14,11 @@ function Home() {
   
   </div>
  
-   <CarouselInfo />
+   <InfoImage />
     
     
     <ThreeCard/>
+    
     </> );
 }
 

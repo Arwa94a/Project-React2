@@ -115,7 +115,7 @@ const [publicInfo,setPublic]=useState([])
   useEffect(() => {
     console.log("useEffect", useEffect)
     getInformations()
-    //getPublic()
+    getPublic()
 
     if (localStorage.tokenJs) {
       getProfile()
@@ -179,6 +179,7 @@ const [publicInfo,setPublic]=useState([])
   /*****************************logout*************************************** */
   const logout = () => {
     localStorage.removeItem("tokenJs")
+    
   }
 
   const store = {

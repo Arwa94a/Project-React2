@@ -3,7 +3,7 @@ import vision from "../Images/vision.png"
 import learn from "../Images/learn.png"
 import links from "../Images/links.png"
 import { Link } from "react-router-dom"
-function CarouselInfo() {
+function InfoImage() {
   return (
     <>
       <Row className="generalAll" >
@@ -30,4 +30,4 @@ function CarouselInfo() {
   )
 }
 
-export default CarouselInfo
+export default InfoImage

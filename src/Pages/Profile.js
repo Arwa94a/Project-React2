@@ -37,7 +37,9 @@ function Profile() {
             <CardInformation information={information} inProfile={true} />
           ))}
         </Row>
+        
       </Container>
+      <img id="imageBackground" src="https://safcsp-platform-assets.s3-eu-west-1.amazonaws.com/login-banner-4.png"/>
     </>
   )
 }

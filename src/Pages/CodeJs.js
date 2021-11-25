@@ -70,7 +70,7 @@ You can use conditional statements in your code to do this.</p>
 </div>
 </Col>
 
-<Col><img src={sidejs} className="imgecsscode" /></Col>
+<Col><img src={sidejs} className="imgecsscode"/></Col>
 </Row>
     </>  );
 }
